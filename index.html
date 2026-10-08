@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Samritha S | AI Product Manager Portfolio</title>
+  <meta name="title" content="Samritha S | AI Product Manager Portfolio">
+  <meta name="description" content="Product Management Portfolio of Samritha S featuring 3 live AI projects and 10 detailed product case studies in user research, growth, and strategy.">
+  <meta name="keywords" content="Samritha S, Product Manager, AI Product Manager, Product Discovery, OutLoud AI, Work Radar AI, Product Strategy, Case Studies">
+  <meta name="author" content="Samritha S">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samritha-portfolio.vercel.app/">
+  <meta property="og:title" content="Samritha S | AI Product Manager Portfolio">
+  <meta property="og:description" content="Explore AI-driven products, case studies, and cross-functional product leadership by Samritha S.">
+
+  <!-- Schema.org Microdata for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Samritha S",
+    "jobTitle": "AI Product Manager",
+    "url": "https://samritha-portfolio.vercel.app/",
+    "sameAs": [
+      "https://www.linkedin.com/in/samritha-sakthiganesh-35b6021b6/"
+    ],
+    "knowsAbout": [
+      "Product Management",
+      "AI Product Management",
+      "User Research",
+      "PRD Writing",
+      "Feature Scoping",
+      "Prototyping"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #F8F3E9;
+      --bg-alt: #F0E8D8;
+      --surface: #FFFFFF;
+      --surface-soft: #FCF9F3;
+      --ink: #221E19;
+      --ink-soft: #6F6558;
+      --ink-faint: #A79E8E;
+      --indigo: #4F46E5;
+      --indigo-deep: #372F9E;
+      --indigo-tint: #ECEBFB;
+      --ochre: #B9852F;
+      --ochre-tint: #F3E6CB;
+      --emerald: #0FA36E;
+      --line: #E7DCC6;
+      --shadow-sm: 0 4px 14px rgba(93, 68, 34, 0.08);
+      --shadow-md: 0 14px 34px rgba(93, 68, 34, 0.12);
+      --shadow-lg: 0 26px 60px rgba(93, 68, 34, 0.16);
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-note: 'Caveat', cursive;
+      --ease: cubic-bezier(.22,.8,.32,1);
+    }
+
+    .dark {
+      --bg: #1B1712;
+      --bg-alt: #221D16;
+      --surface: #26201A;
+      --surface-soft: #2C251D;
+      --ink: #F3ECE0;
+      --ink-soft: #C2B7A3;
+      --ink-faint: #7C7364;
+      --indigo: #8B82FF;
+      --indigo-deep: #B3ACFF;
+      --indigo-tint: #2A2652;
+      --ochre: #E0AC55;
+      --ochre-tint: #3A2E17;
+      --emerald: #34D399;
+      --line: #3A3226;
+      --shadow-sm: 0 4px 14px rgba(0,0,0,0.28);
+      --shadow-md: 0 14px 34px rgba(0,0,0,0.35);
+      --shadow-lg: 0 26px 60px rgba(0,0,0,0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background-color 0.4s var(--ease), color 0.4s var(--ease);
+    }
+
+    h1, h2, h3, h4, .logo {
+      font-family: var(--font-display);
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Navigation Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--bg);
+      opacity: 0.95;
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--line);
+      transition: background-color 0.4s var(--ease), border-color 0.4s var(--ease);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 76px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--indigo);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--indigo);
+    }
+
+    .theme-toggle {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.3s var(--ease);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--indigo);
+      color: var(--indigo);
+    }
+
+    /* Hero Section with Integrated Right Side Image */
+    .hero {
+      padding: 150px 0 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 440px;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: var(--ochre-tint);
+      border: 1px solid var(--ochre);
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--emerald);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--emerald);
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      letter-spacing: -1px;
+      color: var(--ink);
+    }
+
+    .highlight-text {
+      color: var(--indigo);
+    }
+
+    .hero p {
+      font-size: 1.18rem;
+      color: var(--ink-soft);
+      margin-bottom: 2.2rem;
+      line-height: 1.7;
+    }
+
+    .handwritten-note {
+      font-family: var(--font-note);
+      font-size: 1.4rem;
+      color: var(--ochre);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--line);
+      object-fit: cover;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s var(--ease);
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--indigo);
+      color: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover {
+      background: var(--indigo-deep);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--ink);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-soft);
+      border-color: var(--indigo);
+      color: var(--indigo);
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--ink);
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      color: var(--ink-soft);
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      transition: all 0.3s var(--ease);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-card:hover {
+      border-color: var(--indigo);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--ochre);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .project-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: var(--ink);
+    }
+
+    .project-desc {
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-pill {
+      background: var(--indigo-tint);
+      border: 1px solid var(--line);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      color: var(--indigo);
+      font-weight: 600;
+    }
+
+    /* Case Studies Grid */
+    .case-studies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .case-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 1.6rem;
+      transition: all 0.3s var(--ease);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .case-card:hover {
+      border-color: var(--ochre);
+      background: var(--surface-soft);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .case-num {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--ochre);
+      margin-bottom: 0.4rem;
+    }
+
+    .case-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--ink);
+    }
+
+    .case-focus {
+      font-size: 0.82rem;
+      color: var(--indigo);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .case-detail {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      margin-bottom: 0.6rem;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      border-left: 2px solid var(--line);
+      padding-left: 2rem;
+      margin-left: 1rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: calc(-2rem - 6px);
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--indigo);
+      box-shadow: 0 0 10px var(--indigo);
+    }
+
+    .role-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .company-info {
+      font-size: 0.95rem;
+      color: var(--ochre);
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+
+    .date-range {
+      font-size: 0.85rem;
+      color: var(--ink-faint);
+      margin-bottom: 0.8rem;
+    }
+
+    .bullet-points {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+    }
+
+    .bullet-points li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 1.6rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-category h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--indigo);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    footer {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--line);
+      padding: 60px 0 30px;
+      margin-top: 50px;
+      transition: background-color 0.4s var(--ease);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .social-links a {
+      color: var(--ink-soft);
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--indigo);
+    }
+
+    .copyright {
+      text-align: center;
+      color: var(--ink-faint);
+      font-size: 0.85rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-image-wrapper {
+        max-width: 440px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.3rem; }
+      .nav-links { display: none; }
+      .timeline { padding-left: 1.2rem; margin-left: 0.5rem; }
+      .timeline-item::before { left: calc(-1.2rem - 6px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">SAMRITHA S.</a>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#live-projects">Live Projects</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+            <span id="themeLabel">Dark</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-dot"></span> AI Product Management Roles
+          </div>
+          <span class="handwritten-note">Understanding people. Solving problems.</span>
+          <h1>Building AI products that matter <br>through <span class="highlight-text">rigorous product discovery.</span></h1>
+          <p>
+            I turn user insights into practical solutions, combining 6 years of cross-functional experience at Apple and IDrive with hands-on AI product management, discovery research, and rapid prototyping 
+          </p>
+          <div class="hero-cta">
+            <a href="#live-projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> View Live Projects</a>
+            <a href="#case-studies" class="btn btn-secondary"><i class="fa-solid fa-book-open"></i> Read Case Studies</a>
+            <a href="https://www.linkedin.com/in/samritha-sakthiganesh-35b6021b6/" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="profile.png" alt="Samritha S Workspace" class="hero-image" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Projects -->
+  <section id="live-projects">
+    <div class="container">
+      <h2 class="section-title">Live AI Projects</h2>
+      <p class="section-subtitle">Functional AI products and workflows built from discovery to delivery </p>
+
+      <div class="projects-grid">
+        
+        <!-- OutLoud AI -->
+        <article class="project-card">
+          <div>
+            <span class="project-tag">AI / EdTech • Capstone 2026 </span>
+            <h3 class="project-title">OutLoud AI English Speaking Coach </h3>
+            <p class="project-desc">
+              A private speaking practice tool built to help non-native English speakers gain confidence through spoken practice and supportive real-time AI feedback 
+            </p>
+            <div class="tech-stack">
+              <span class="tech-pill">Claude API</span>
+              <span class="tech-pill">Web Speech API</span>
+              <span class="tech-pill">Replit</span>
+              <span class="tech-pill">User Research</span>
+              <span class="tech-pill">PRD & Wireframing</span>
+            </div>
+          </div>
+          <a href="https://prototypesamrithaoutloud.replit.app/" target="_blank" class="btn btn-primary" style="justify-content: center;">
+            <i class="fa-solid fa-external-link"></i> Launch Live Prototype
+          </a>
+        </article>
+
+        <!-- Work Radar AI -->
+        <article class="project-card">
+          <div>
+            <span class="project-tag">AI / Productivity</span>
+            <h3 class="project-title">Work Radar AI Team Dashboard </h3>
+            <p class="project-desc">
+              Consolidates team activity and priorities in one view, offering AI summaries and actionable controls to assign, complete, or snooze tasks 
+            </p>
+            <div class="tech-stack">
+              <span class="tech-pill">AI Summaries</span>
+              <span class="tech-pill">Product Scoping</span>
+              <span class="tech-pill">PRD Writing</span>
+              <span class="tech-pill">UI Design</span>
+              <span class="tech-pill">Web Prototype</span>
+            </div>
+          </div>
+          <a href="https://workradar-lilac.vercel.app/" target="_blank" class="btn btn-primary" style="justify-content: center;">
+            <i class="fa-solid fa-external-link"></i> Launch Live Prototype 
+          </a>
+        </article>
+
+        <!-- Competitor Intelligence -->
+        <article class="project-card">
+          <div>
+            <span class="project-tag">Automation / Product Ops </span>
+            <h3 class="project-title">Competitor Intelligence Automation </h3>
+            <p class="project-desc">
+              An automated competitive news digest system built in coordination with technical stakeholders to auto-summarize market news via email .
+            </p>
+            <div class="tech-stack">
+              <span class="tech-pill">Groq Llama 3.3 70B</span>
+              <span class="tech-pill">NewsAPI</span>
+              <span class="tech-pill">n8n</span>
+              <span class="tech-pill">Workflow Design</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-secondary" style="justify-content: center;">
+            <i class="fa-solid fa-file-alt"></i> Request System Spec 
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Case Studies -->
+  <section id="case-studies">
+    <div class="container">
+      <h2 class="section-title">Product Case Studies</h2>
+      <p class="section-subtitle">10 product analyses exploring discovery, growth, retention, usability, and architecture trade-offs </p>
+
+      <div class="case-studies-grid">
+        
+        <div class="case-card">
+          <div class="case-num">Case Study 01 </div>
+          <h3 class="case-title">Nykaa User Experience Analysis </h3>
+          <div class="case-focus">Journey Mapping · Personas · UX Analysis </div>
+          <p class="case-detail"><strong>Problem:</strong> Homepage promotional noise and shade-selection uncertainty complicate shopping decisions </p>
+          <p class="case-detail"><strong>Decisions:</strong> Recommended intent-aware navigation, review summaries, and skin-tone filtering </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-num">Case Study 02 </div>
+          <h3 class="case-title">Product Strategy for B2B SaaS </h3>
+          <div class="case-focus">Customer Segmentation · Roadmapping · GTM </div>
+          <p class="case-detail"><strong>Problem:</strong> Disconnected HR, IT, and Finance workflows delay employee onboarding </p>
+          <p class="case-detail"><strong>Decisions:</strong> Formulated a 2-3 year strategy starting with mid-market IT provisioning and workflow intelligence </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-num">Case Study 03 </div>
+          <h3 class="case-title">Uber Find My Ride </h3>
+          <div class="case-focus">User Research · Insight Synthesis · Solution Ideation </div>
+          <p class="case-detail"><strong>Problem:</strong> Map pins fail to guide riders at complex, crowded locations like airports and malls </p>
+          <p class="case-detail"><strong>Decisions:</strong> Proposed named pickup guidance, visual sync beacons, and audio landmark cues based on 10 user interviews </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-num">Case Study 04 </div>
+          <h3 class="case-title">Zepto Increasing AOV </h3>
+          <div class="case-focus">User Segmentation · RICE · Experiment Design </div>
+          <p class="case-detail"><strong>Problem:</strong> Search-first quick commerce habits limit basket size and product discovery </p>
+          <p class="case-detail"><strong>Decisions:</strong> Prioritized a tiered delivery reward bar, contextual basket expansion, and saved essentials </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-num">Case Study 05 </div>
+          <h3 class="case-title">Flipkart UX Evaluation & Redesign </h3>
+          <div class="case-focus">Heuristic Evaluation · UX Laws · Journey Analysis </div>
+          <p class="case-detail"><strong>Problem:</strong> Auth uncertainty, payment overload, and late fee disclosures cause checkout friction </p>
+          <p class="case-detail"><strong>Decisions:</strong> Recommended visible OTP controls, progressive payment disclosure, and upfront COD pricing </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-num">Case Study 06 </div>
+          <h3 class="case-title">VitaFit Retention & FitFusion PRD </h3>
+          <div class="case-focus">PRD Writing · Gamification · Wireframing </div>
+          <p class="case-detail"><strong>Problem:</strong> Solitary fitness app engagement drops rapidly after initial onboarding </p>
+          <p class="case-detail"><strong>Decisions:</strong> Designed XP reward structures, social badges, and community challenges with a phased validation plan </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-num">Case Study 07 </div>
+          <h3 class="case-title">Zomato Funnel Optimisation </h3>
+          <div class="case-focus">Funnel Analysis · Cohorts · Product Metrics </div>
+          <p class="case-detail"><strong>Problem:</strong> Drop-offs compound from menu browsing through to final order placement </p>
+          <p class="case-detail"><strong>Decisions:</strong> Prioritized all-in cart pricing transparently and introduced quick-reorder nudges </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-num">Case Study 08 </div>
+          <h3 class="case-title">Twitter / X AARRR Growth Analysis </h3>
+          <div class="case-focus">AARRR · Epic Definition · RICE Prioritization </div>
+          <p class="case-detail"><strong>Problem:</strong> Irrelevant first feeds and notification overload degrade user activation and retention </p>
+          <p class="case-detail"><strong>Decisions:</strong> Mapped growth epics focusing on feed controls, onboarding personalization, and notification tuning </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-num">Case Study 09 </div>
+          <h3 class="case-title">Personalized Course Recommendations </h3>
+          <div class="case-focus">System Design · Requirements · Tech Trade-offs </div>
+          <p class="case-detail"><strong>Problem:</strong> Matching courses to user goals without degrading real-time search latency </p>
+          <p class="case-detail"><strong>Decisions:</strong> Architected offline candidate generation paired with lightweight real-time re-ranking </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-num">Case Study 10 </div>
+          <h3 class="case-title">System Prompt Design for PRD Generation </h3>
+          <div class="case-focus">Prompt Engineering · AI Guardrails · PRD </div>
+          <p class="case-detail"><strong>Problem:</strong> Unstructured AI prompts generate incomplete or hallucinated product requirements </p>
+          <p class="case-detail"><strong>Decisions:</strong> Engineered a structured 10-section prompt template with strict anti-fabrication rules </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Work Experience</h2>
+      <p class="section-subtitle">6 years applying requirements management, stakeholder alignment, and delivery rigor </p>
+
+      <div class="timeline">
+        
+        <div class="timeline-item">
+          <h3 class="role-title">Senior Video Specialist </h3>
+          <div class="company-info">IDrive Software India Pvt Ltd </div>
+          <div class="date-range">March 2024 – April 2026 </div>
+          <ul class="bullet-points">
+            <li>Led product communication strategy across multimedia solutions, boosting user training engagement by 45% .</li>
+            <li>Managed cross-functional delivery across 30+ projects with a 100% on-time release record .</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3 class="role-title">Video Producer </h3>
+          <div class="company-info">Apple India Pvt Ltd </div>
+          <div class="date-range">March 2022 – February 2024 </div>
+          <ul class="bullet-points">
+            <li>Coordinated product launch campaigns across 6 cross-functional teams and 8 countries, driving a 35% adoption uplift </li>
+            <li>Tracked project KPIs to cut production timelines by 20% while upholding regulatory compliance .</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3 class="role-title">Video Specialist </h3>
+          <div class="company-info">IDrive Software India Pvt Ltd </div>
+          <div class="date-range">January 2021 – February 2022 </div>
+          <ul class="bullet-points">
+            <li>Mapped user stories and feature priorities into media, increasing product trial signups by 25% .</li>
+            <li>Introduced feedback loops for faster 15% iteration cycles .</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills & Toolkit</h2>
+      <p class="section-subtitle">Bridging product strategy with hands-on AI prototyping </p>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-diagram-project"></i> Product Management </h3>
+          <div class="tech-stack">
+            <span class="tech-pill">Product Discovery</span>
+            <span class="tech-pill">User Research</span>
+            <span class="tech-pill">PRD Writing</span>
+            <span class="tech-pill">Roadmapping</span>
+            <span class="tech-pill">Wireframing</span>
+            <span class="tech-pill">AARRR Metrics</span>
+            <span class="tech-pill">Agile/Scrum</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-robot"></i> AI & Workflow Tools </h3>
+          <div class="tech-stack">
+            <span class="tech-pill">Claude API</span>
+            <span class="tech-pill">Prompt Engineering</span>
+            <span class="tech-pill">n8n Workflows</span>
+            <span class="tech-pill">Groq Llama 3.3</span>
+            <span class="tech-pill">Web Speech API</span>
+            <span class="tech-pill">Figma</span>
+            <span class="tech-pill">Jira / Notion</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Certification & Education </h3>
+          <div class="tech-stack">
+            <span class="tech-pill">AI-First PM (Airtribe, 2026)</span>
+            <span class="tech-pill">BSc Visual Communication</span>
+            <span class="tech-pill">Higher Diploma VFX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h2>Let's build something meaningful </h2>
+          <p style="color: var(--ink-soft); margin-top: 0.5rem;">Connect with me to discuss AI Product Management opportunities </p>
+        </div>
+        <div class="social-links">
+          <a href="mailto:samrithaganesh029@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/samritha-sakthiganesh-35b6021b6/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="tel:+919597077743" title="Phone"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 Samritha S. All rights reserved 
+      </div>
+    </div>
+  </footer>
+
+  <!-- Light/Dark Mode Switcher Script -->
+  <script>
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      
+      themeIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+      themeLabel.textContent = isDark ? 'Light' : 'Dark';
+    });
+  </script>
+</body>
+</html>
